@@ -1,0 +1,22 @@
+{
+  "name": "payment-form",
+  "version": "1.0.0",
+  "description": "*При выполнении задания вам понадобится npm и система сборки. Вы можете взять parcel или попробовать любую другую систему, если сможете в ней разобраться.*",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html",
+    "dev": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "creditcard.js": "^3.0.33",
+    "inputmask": "^5.0.8-beta.15",
+    "redom": "^4.1.5",
+    "tippy.js": "^6.3.7"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "main": "main.js"
+}

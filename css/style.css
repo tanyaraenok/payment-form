@@ -1,0 +1,243 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --white: #fff;
+    --super-silver: #eee;
+    --somnambulist: #778899;
+    --dim-grey: #696969;
+    --ultimate-grey: #a9a9a9;
+    --gold: #ffd700;
+    --under-the-sea: #191970;
+}
+
+/* @font-face {
+    font-family: "Muller";
+    src: local("muller-bold"),
+      url("../fonts/muller-bold.woff2") format("woff2"),
+      url("../fonts/muller-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  } */
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    gap: 20px;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+.payment-details-container {
+    position: relative;
+    width: 550px;
+    height: 260px;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.container,
+.payment-form,
+.payment-form__label_card-number,
+.payment-form__label_card-holder,
+.payment-form__label_expiration-date,
+.payment-form__label_security-code,
+.payment-form__label_email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.payment-form__div-exdate-email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    gap: 20px;
+}
+
+.payment-form {
+    position: absolute;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 370px;
+    height: 230px;
+    background-color: var(--super-silver);
+}
+
+.payment-form_right {
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.payment-form_left {
+    bottom: 0;
+    right: 0;
+    background-color: var(--ultimate-grey);
+}
+
+.payment-form__left-div {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    height: 40px;
+    width: 100%;
+    background-color: var(--dim-grey);
+}
+
+.payment-form__label_security-code {
+    position: absolute;
+    right: 20px;
+    color: var(--black);
+}
+
+.payment-form__input_card-holder,
+.payment-form__input_card-number,
+.payment-form__input_expiration-date,
+.payment-form__input_security-code,
+.payment-form__input_email {
+    padding: 3px 5px 3px 10px;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.payment-form__input_expiration-date {
+    width: 80px;
+    height: 30px;
+}
+
+.payment-form__input_security-code {
+    width: 90px;
+}
+
+.save-payment-method-label {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.save-payment-method-input {
+    cursor: pointer;
+}
+
+.confirm-payment-button {
+    padding: 10px 40px;
+    border: 2px solid transparent;
+    border-radius: 36px;
+    max-width: 110px;
+    color: var(--under-the-sea);
+    background-color: var(--gold);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.confirm-payment-button:focus {
+    border: 2px solid var(--under-the-sea);
+    outline: none;
+}
+
+@media (hover: hover) {
+    .confirm-payment-button:hover {
+        color: var(--white);
+        background-color: var(--under-the-sea);
+    }
+}
+
+@media (hover: none) {
+    .confirm-payment-button:active {
+        color: var(--white);
+        background-color: var(--under-the-sea);
+    }
+}
+
+.confirm-payment-button:active {
+    outline: none;
+    color: var(--white);
+    background-color: var(--under-the-sea);
+}
+
+.confirm-payment-button:disabled {
+    background-color: var(--ultimate-grey);
+    pointer-events: none;
+}
+
+.payment-form__card-type-div {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 140px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.uatp {
+    background-image: url('../img/uatp-logo.svg');
+}
+
+.unionpay {
+    background-image: url('../img/unionpay-logo.svg');
+}
+
+.visa {
+    background-image: url('../img/visa-logo.svg');
+}
+
+.american-express {
+    background-image: url('../img/american-express-logo.svg');
+}
+
+.dankort {
+    background-image: url('../img/dankort-logo.svg');
+}
+
+.diners-club {
+    background-image: url('../img/diners-club-logo.svg');
+}
+
+.elo {
+    background-image: url('../img/elo-logo.png');
+}
+
+.forbrugsforeningen {
+    background-image: url('../img/forbrugsforeningen-logo.png');
+}
+
+.jcb {
+    background-image: url('../img/jcb-logo.svg');
+}
+
+.maestro {
+    background-image: url('../img/maestro-logo.svg');
+}
+
+.mastercard {
+    background-image: url('../img/mastercard-logo.svg');
+}
+
+.mir {
+    background-image: url('../img/mir-logo.svg');
+}
+
+.troy {
+    background-image: url('../img/troy-logo.svg');
+}
